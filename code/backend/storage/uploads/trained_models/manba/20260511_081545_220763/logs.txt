@@ -1,0 +1,62 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_081545_220763\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_081545_220763 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Mamba-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 192 (2.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=2,352, 验证=504, 测试=504
+
+  训练: Mamba-QR | 参数量: 233,735
+    Epoch   1 | Train: 0.034855 Val: 0.009670 | LR: 1.7e-04 | 45s ★
+    Epoch   2 | Train: 0.011497 Val: 0.008794 | LR: 3.3e-04 | 68s ★
+    Epoch   3 | Train: 0.010585 Val: 0.008388 | LR: 5.0e-04 | 91s ★
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 727, in <module>
+    main()
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 525, in main
+    model = train_model(model, data, config, f"{model_name}-QR")
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 299, in train_model
+    for xb, yb in train_loader:
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 734, in __next__
+    data = self._next_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 790, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\fetch.py", line 55, in fetch
+    return self.collate_fn(data)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\collate.py", line 398, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\collate.py", line 211, in collate
+    return [
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\collate.py", line 212, in <listcomp>
+    collate(samples, collate_fn_map=collate_fn_map)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\collate.py", line 155, in collate
+    return collate_fn_map[elem_type](batch, collate_fn_map=collate_fn_map)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\_utils\collate.py", line 272, in collate_tensor_fn
+    return torch.stack(batch, 0, out=out)
+KeyboardInterrupt
+
+[attempt 1 failed with code 3221225786]
+
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_081545_220763\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_081545_220763 --batch_size 16 --input_len 96
+
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 13, in <module>
+    import pandas as pd
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\pandas\__init__.py", line 80, in <module>
+    from pandas.core.api import (
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\pandas\core\api.py", line 9, in <module>
+    from pandas.core.dtypes.dtypes import (
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\pandas\core\dtypes\dtypes.py", line 24, in <module>
+    from pandas._libs import (
+  File "pandas/_libs/lib.pyx", line 131, in init pandas._libs.lib
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+KeyboardInterrupt
+
+[attempt 2 failed with code 3221225786]
+

@@ -1,0 +1,6 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_051528_436658\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_051528_436658
+
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 9, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

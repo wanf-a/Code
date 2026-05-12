@@ -1,0 +1,25 @@
+{
+  "input_len": 192,
+  "quantiles": [
+    0.005,
+    0.025,
+    0.05,
+    0.5,
+    0.95,
+    0.975,
+    0.995
+  ],
+  "models": [
+    "Mamba"
+  ],
+  "train_config": {
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3,
+    "max_epochs": 50,
+    "patience": 10
+  },
+  "data_file": "E:\\◊¿√Ê\\œÃ”„\\code\\code\\backend\\storage\\uploads\\trained_models\\manba\\20260511_090841_261010\\input.csv",
+  "seed": 42
+}

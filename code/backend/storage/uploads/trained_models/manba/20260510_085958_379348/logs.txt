@@ -1,0 +1,51 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Mamba-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: Mamba-QR | 参数量: 233,735
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 726, in <module>
+    main()
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 524, in main
+    model = train_model(model, data, config, f"{model_name}-QR")
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 302, in train_model
+    loss = loss_fn(model(xb), yb)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py", line 223, in forward
+    out, _ = self.gru(h)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\nn\modules\rnn.py", line 1391, in forward
+    result = _VF.gru(
+RuntimeError: [enforce fail at alloc_cpu.cpp:121] data. DefaultCPUAllocator: not enough memory: you tried to allocate 88080384 bytes.
+
+[attempt 1 failed with code 1]
+
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348\input.csv E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348
+
+usage: 22cfd302a5b2445d86a9af7957511a8b.py [-h] [--data DATA]
+                                           [--input_len INPUT_LEN]
+                                           [--batch_size BATCH_SIZE]
+                                           [--max_epochs MAX_EPOCHS]
+                                           [--learning_rate LEARNING_RATE]
+                                           [--patience PATIENCE] [--seed SEED]
+                                           [--output_dir OUTPUT_DIR]
+22cfd302a5b2445d86a9af7957511a8b.py: error: unrecognized arguments: E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348\input.csv E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260510_085958_379348
+
+[attempt 2 failed with code 2]
+

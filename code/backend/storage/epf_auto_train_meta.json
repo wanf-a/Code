@@ -1,0 +1,4 @@
+{
+  "last_train_attempt_at": "2026-03-10T13:24:45.874554",
+  "last_train_message": "EPF retraining failed (code=1): Traceback (most recent call last): |   File \"C:\\Users\\hyy\\Desktop\\software\\epf\\all\\epf_predict.py\", line 9, in <module> |     import matplotlib | ModuleNotFoundError: No module named 'matplotlib'"
+}

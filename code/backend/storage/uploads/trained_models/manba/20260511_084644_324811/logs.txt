@@ -1,0 +1,40 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\22cfd302a5b2445d86a9af7957511a8b.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_084644_324811\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\manba\20260511_084644_324811 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Mamba-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 192 (2.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=2,352, 验证=504, 测试=504
+
+  训练: Mamba-QR | 参数量: 233,735 | max_epochs: 50
+    Epoch   1 | Train: 0.034855 Val: 0.009670 | LR: 1.7e-04 | 49s ★
+    Epoch   2 | Train: 0.011497 Val: 0.008794 | LR: 3.3e-04 | 75s ★
+    Epoch   3 | Train: 0.010585 Val: 0.008388 | LR: 5.0e-04 | 103s ★
+    早停于 Epoch 36 (patience=10)
+    完成: 1039s, 最佳验证损失: 0.003879
+
+  Mamba-QR 测试集结果:
+    MAPE(150) = 0.0830
+    RMSE = 77.49 | R² = 0.6738
+    PICP90 = 0.962 | PICP95 = 0.978
+
+======================================================================
+  保存完整测试集预测结果
+======================================================================
+  完整测试集预测已保存: predictions_test_full.csv (504 条记录)
+
+======================================================================
+  周前概率预测
+======================================================================
+  评估周数: 34
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FF889BBC203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF88BE37374  Unknown               Unknown  Unknown
+ntdll.dll          00007FF88BF7CC91  Unknown               Unknown  Unknown

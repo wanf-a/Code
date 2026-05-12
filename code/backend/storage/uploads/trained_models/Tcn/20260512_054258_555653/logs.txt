@@ -1,0 +1,200 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\94f2f478364d4f31831cdd27f22aebca.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260512_054258_555653\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260512_054258_555653 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: TCN-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch 1/50 batch 1/577 | loss: 0.094351
+    Epoch 1/50 batch 144/577 | loss: 0.010138
+    Epoch 1/50 batch 288/577 | loss: 0.008486
+    Epoch 1/50 batch 432/577 | loss: 0.014042
+    Epoch 1/50 batch 576/577 | loss: 0.008588
+    Epoch   1/50 | Train: 0.011023 Val: 0.006205 | LR: 1.7e-04 | 293s ★
+    Epoch 2/50 batch 1/577 | loss: 0.010778
+    Epoch 2/50 batch 144/577 | loss: 0.009504
+    Epoch 2/50 batch 288/577 | loss: 0.005748
+    Epoch 2/50 batch 432/577 | loss: 0.006187
+    Epoch 2/50 batch 576/577 | loss: 0.007924
+    Epoch   2/50 | Train: 0.007434 Val: 0.005125 | LR: 3.3e-04 | 561s ★
+    Epoch 3/50 batch 1/577 | loss: 0.005014
+    Epoch 3/50 batch 144/577 | loss: 0.004452
+    Epoch 3/50 batch 288/577 | loss: 0.006796
+    Epoch 3/50 batch 432/577 | loss: 0.004471
+    Epoch 3/50 batch 576/577 | loss: 0.006213
+    Epoch   3/50 | Train: 0.006698 Val: 0.004988 | LR: 5.0e-04 | 824s ★
+    Epoch 4/50 batch 1/577 | loss: 0.006258
+    Epoch 4/50 batch 144/577 | loss: 0.011202
+    Epoch 4/50 batch 288/577 | loss: 0.005073
+    Epoch 4/50 batch 432/577 | loss: 0.005925
+    Epoch 4/50 batch 576/577 | loss: 0.004748
+    Epoch   4/50 | Train: 0.006305 Val: 0.004581 | LR: 5.0e-04 | 1078s ★
+    Epoch 5/50 batch 1/577 | loss: 0.005666
+    Epoch 5/50 batch 144/577 | loss: 0.004565
+    Epoch 5/50 batch 288/577 | loss: 0.007525
+    Epoch 5/50 batch 432/577 | loss: 0.005735
+    Epoch 5/50 batch 576/577 | loss: 0.005186
+    Epoch   5/50 | Train: 0.006143 Val: 0.004225 | LR: 5.0e-04 | 1343s ★
+    Epoch 6/50 batch 1/577 | loss: 0.006915
+    Epoch 6/50 batch 144/577 | loss: 0.007938
+    Epoch 6/50 batch 288/577 | loss: 0.004447
+    Epoch 6/50 batch 432/577 | loss: 0.007902
+    Epoch 6/50 batch 576/577 | loss: 0.005561
+    Epoch   6/50 | Train: 0.005987 Val: 0.004258 | LR: 5.0e-04 | 1615s
+    Epoch 7/50 batch 1/577 | loss: 0.007906
+    Epoch 7/50 batch 144/577 | loss: 0.010290
+    Epoch 7/50 batch 288/577 | loss: 0.007553
+    Epoch 7/50 batch 432/577 | loss: 0.010770
+    Epoch 7/50 batch 576/577 | loss: 0.005609
+    Epoch   7/50 | Train: 0.005890 Val: 0.004651 | LR: 5.0e-04 | 1860s
+    Epoch 8/50 batch 1/577 | loss: 0.004727
+    Epoch 8/50 batch 144/577 | loss: 0.005222
+    Epoch 8/50 batch 288/577 | loss: 0.005680
+    Epoch 8/50 batch 432/577 | loss: 0.007941
+    Epoch 8/50 batch 576/577 | loss: 0.005355
+    Epoch   8/50 | Train: 0.005802 Val: 0.004551 | LR: 4.9e-04 | 2125s
+    Epoch 9/50 batch 1/577 | loss: 0.004815
+    Epoch 9/50 batch 144/577 | loss: 0.006491
+    Epoch 9/50 batch 288/577 | loss: 0.004651
+    Epoch 9/50 batch 432/577 | loss: 0.007791
+    Epoch 9/50 batch 576/577 | loss: 0.006217
+    Epoch   9/50 | Train: 0.005702 Val: 0.004394 | LR: 4.9e-04 | 2396s
+    Epoch 10/50 batch 1/577 | loss: 0.005421
+    Epoch 10/50 batch 144/577 | loss: 0.007129
+    Epoch 10/50 batch 288/577 | loss: 0.005353
+    Epoch 10/50 batch 432/577 | loss: 0.003627
+    Epoch 10/50 batch 576/577 | loss: 0.003971
+    Epoch  10/50 | Train: 0.005647 Val: 0.004166 | LR: 4.8e-04 | 2650s ★
+    Epoch 11/50 batch 1/577 | loss: 0.007072
+    Epoch 11/50 batch 144/577 | loss: 0.008901
+    Epoch 11/50 batch 288/577 | loss: 0.003695
+    Epoch 11/50 batch 432/577 | loss: 0.004685
+    Epoch 11/50 batch 576/577 | loss: 0.005415
+    Epoch  11/50 | Train: 0.005533 Val: 0.004249 | LR: 4.7e-04 | 2907s
+    Epoch 12/50 batch 1/577 | loss: 0.003270
+    Epoch 12/50 batch 144/577 | loss: 0.006968
+    Epoch 12/50 batch 288/577 | loss: 0.005518
+    Epoch 12/50 batch 432/577 | loss: 0.004658
+    Epoch 12/50 batch 576/577 | loss: 0.004723
+    Epoch  12/50 | Train: 0.005516 Val: 0.004503 | LR: 4.7e-04 | 3172s
+    Epoch 13/50 batch 1/577 | loss: 0.003711
+    Epoch 13/50 batch 144/577 | loss: 0.003734
+    Epoch 13/50 batch 288/577 | loss: 0.004658
+    Epoch 13/50 batch 432/577 | loss: 0.005774
+    Epoch 13/50 batch 576/577 | loss: 0.009393
+    Epoch  13/50 | Train: 0.005466 Val: 0.004407 | LR: 4.6e-04 | 3443s
+    Epoch 14/50 batch 1/577 | loss: 0.006101
+    Epoch 14/50 batch 144/577 | loss: 0.003910
+    Epoch 14/50 batch 288/577 | loss: 0.006813
+    Epoch 14/50 batch 432/577 | loss: 0.004961
+    Epoch 14/50 batch 576/577 | loss: 0.014352
+    Epoch  14/50 | Train: 0.005413 Val: 0.004014 | LR: 4.5e-04 | 3692s ★
+    Epoch 15/50 batch 1/577 | loss: 0.003486
+    Epoch 15/50 batch 144/577 | loss: 0.003330
+    Epoch 15/50 batch 288/577 | loss: 0.003602
+    Epoch 15/50 batch 432/577 | loss: 0.005169
+    Epoch 15/50 batch 576/577 | loss: 0.004350
+    Epoch  15/50 | Train: 0.005365 Val: 0.004056 | LR: 4.4e-04 | 3958s
+    Epoch 16/50 batch 1/577 | loss: 0.003191
+    Epoch 16/50 batch 144/577 | loss: 0.003253
+    Epoch 16/50 batch 288/577 | loss: 0.003634
+    Epoch 16/50 batch 432/577 | loss: 0.004000
+    Epoch 16/50 batch 576/577 | loss: 0.005662
+    Epoch  16/50 | Train: 0.005329 Val: 0.004178 | LR: 4.2e-04 | 4241s
+    Epoch 17/50 batch 1/577 | loss: 0.004305
+    Epoch 17/50 batch 144/577 | loss: 0.005317
+    Epoch 17/50 batch 288/577 | loss: 0.003378
+    Epoch 17/50 batch 432/577 | loss: 0.002708
+    Epoch 17/50 batch 576/577 | loss: 0.004891
+    Epoch  17/50 | Train: 0.005272 Val: 0.003912 | LR: 4.1e-04 | 4492s ★
+    Epoch 18/50 batch 1/577 | loss: 0.003319
+    Epoch 18/50 batch 144/577 | loss: 0.004407
+    Epoch 18/50 batch 288/577 | loss: 0.003732
+    Epoch 18/50 batch 432/577 | loss: 0.004185
+    Epoch 18/50 batch 576/577 | loss: 0.007240
+    Epoch  18/50 | Train: 0.005218 Val: 0.003975 | LR: 4.0e-04 | 4755s
+    Epoch 19/50 batch 1/577 | loss: 0.005397
+    Epoch 19/50 batch 144/577 | loss: 0.005884
+    Epoch 19/50 batch 288/577 | loss: 0.004379
+    Epoch 19/50 batch 432/577 | loss: 0.007220
+    Epoch 19/50 batch 576/577 | loss: 0.004318
+    Epoch  19/50 | Train: 0.005211 Val: 0.003900 | LR: 3.8e-04 | 5019s ★
+    Epoch 20/50 batch 1/577 | loss: 0.007759
+    Epoch 20/50 batch 144/577 | loss: 0.003649
+    Epoch 20/50 batch 288/577 | loss: 0.003229
+    Epoch 20/50 batch 432/577 | loss: 0.004093
+    Epoch 20/50 batch 576/577 | loss: 0.004549
+    Epoch  20/50 | Train: 0.005122 Val: 0.004181 | LR: 3.7e-04 | 5288s
+    Epoch 21/50 batch 1/577 | loss: 0.004389
+    Epoch 21/50 batch 144/577 | loss: 0.004390
+    Epoch 21/50 batch 288/577 | loss: 0.004124
+    Epoch 21/50 batch 432/577 | loss: 0.003068
+    Epoch 21/50 batch 576/577 | loss: 0.005825
+    Epoch  21/50 | Train: 0.005110 Val: 0.003829 | LR: 3.6e-04 | 5539s ★
+    Epoch 22/50 batch 1/577 | loss: 0.004456
+    Epoch 22/50 batch 144/577 | loss: 0.005358
+    Epoch 22/50 batch 288/577 | loss: 0.005402
+    Epoch 22/50 batch 432/577 | loss: 0.004997
+    Epoch 22/50 batch 576/577 | loss: 0.006247
+    Epoch  22/50 | Train: 0.005040 Val: 0.003867 | LR: 3.4e-04 | 5803s
+    Epoch 23/50 batch 1/577 | loss: 0.007710
+    Epoch 23/50 batch 144/577 | loss: 0.003140
+    Epoch 23/50 batch 288/577 | loss: 0.005959
+    Epoch 23/50 batch 432/577 | loss: 0.005503
+    Epoch 23/50 batch 576/577 | loss: 0.004472
+    Epoch  23/50 | Train: 0.005011 Val: 0.003789 | LR: 3.2e-04 | 6078s ★
+    Epoch 24/50 batch 1/577 | loss: 0.005395
+    Epoch 24/50 batch 144/577 | loss: 0.003193
+    Epoch 24/50 batch 288/577 | loss: 0.006340
+    Epoch 24/50 batch 432/577 | loss: 0.004858
+    Epoch 24/50 batch 576/577 | loss: 0.002885
+    Epoch  24/50 | Train: 0.004999 Val: 0.003731 | LR: 3.1e-04 | 6320s ★
+    Epoch 25/50 batch 1/577 | loss: 0.004441
+    Epoch 25/50 batch 144/577 | loss: 0.003593
+    Epoch 25/50 batch 288/577 | loss: 0.005150
+    Epoch 25/50 batch 432/577 | loss: 0.013235
+    Epoch 25/50 batch 576/577 | loss: 0.011182
+    Epoch  25/50 | Train: 0.004967 Val: 0.004149 | LR: 2.9e-04 | 6585s
+    Epoch 26/50 batch 1/577 | loss: 0.005392
+    Epoch 26/50 batch 144/577 | loss: 0.004684
+    Epoch 26/50 batch 288/577 | loss: 0.007764
+    Epoch 26/50 batch 432/577 | loss: 0.004926
+    Epoch 26/50 batch 576/577 | loss: 0.002351
+    Epoch  26/50 | Train: 0.004915 Val: 0.003736 | LR: 2.8e-04 | 6854s
+    Epoch 27/50 batch 1/577 | loss: 0.004754
+    Epoch 27/50 batch 144/577 | loss: 0.007709
+    Epoch 27/50 batch 288/577 | loss: 0.002806
+    Epoch 27/50 batch 432/577 | loss: 0.006553
+    Epoch 27/50 batch 576/577 | loss: 0.009077
+    Epoch  27/50 | Train: 0.004902 Val: 0.003797 | LR: 2.6e-04 | 7114s
+    Epoch 28/50 batch 1/577 | loss: 0.005778
+    Epoch 28/50 batch 144/577 | loss: 0.006189
+    Epoch 28/50 batch 288/577 | loss: 0.003975
+    Epoch 28/50 batch 432/577 | loss: 0.002782
+    Epoch 28/50 batch 576/577 | loss: 0.002766
+    Epoch  28/50 | Train: 0.004861 Val: 0.003982 | LR: 2.4e-04 | 7370s
+    Epoch 29/50 batch 1/577 | loss: 0.003108
+    Epoch 29/50 batch 144/577 | loss: 0.004252
+    Epoch 29/50 batch 288/577 | loss: 0.005979
+    Epoch 29/50 batch 432/577 | loss: 0.003898
+    Epoch 29/50 batch 576/577 | loss: 0.007863
+    Epoch  29/50 | Train: 0.004818 Val: 0.003983 | LR: 2.3e-04 | 7656s
+    Epoch 30/50 batch 1/577 | loss: 0.004666
+    Epoch 30/50 batch 144/577 | loss: 0.002614
+    Epoch 30/50 batch 288/577 | loss: 0.005930
+    Epoch 30/50 batch 432/577 | loss: 0.012345
+    Epoch 30/50 batch 576/577 | loss: 0.004424
+    Epoch  30/50 | Train: 0.004786 Val: 0.003764 | LR: 2.1e-04 | 8425s
+    Epoch 31/50 batch 1/577 | loss: 0.004160
+    Epoch 31/50 batch 144/577 | loss: 0.003426
+    Epoch 31/50 batch 288/577 | loss: 0.005646
+    Epoch 31/50 batch 432/577 | loss: 0.003247
+    Epoch 31/50 batch 576/577 | loss: 0.003688

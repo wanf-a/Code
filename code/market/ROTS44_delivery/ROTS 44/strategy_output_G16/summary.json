@@ -1,0 +1,26 @@
+{
+  "case_name": "ROTS 44",
+  "scenario": "G16",
+  "target_plants": [
+    "G16"
+  ],
+  "train_period": "20260101~20260318",
+  "apply_period": "20260319~20260401",
+  "n_target_units": 6,
+  "n_total_units": 32,
+  "n_apply_days": 14,
+  "total_base_revenue": 4253.736057126308,
+  "total_strat_revenue": 4118.4005518983095,
+  "revenue_change_pct": -3.1815680007054077,
+  "score": 70.0,
+  "companies": [
+    {
+      "plant_name": "G16",
+      "base_revenue": 4253.736057126308,
+      "strat_revenue": 4118.4005518983095,
+      "delta": -135.3355052279985,
+      "pct": -3.1815680007054077
+    }
+  ],
+  "ensemble_weights_used": "TCN=0.5, Mamba=0.5 (Step1)"
+}

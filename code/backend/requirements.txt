@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+pymysql
+pydantic
+pydantic-settings
+python-jose
+passlib[bcrypt]
+python-multipart
+alembic
+cryptography
+bcrypt<4.0
+openpyxl
+matplotlib
+scikit-learn
+torch
+

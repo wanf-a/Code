@@ -1,0 +1,103 @@
+{
+  "n_days": 14,
+  "date_range": "20260319~20260401",
+  "target_plants": [
+    "G20"
+  ],
+  "total_base_revenue": 8925.092246819222,
+  "total_strat_revenue": 8270.939409812127,
+  "revenue_delta": -654.1528370070955,
+  "revenue_pct": -7.3293677971813285,
+  "target_delta": 586.355777292747,
+  "rival_delta": -1240.5086142998418,
+  "improved_companies": 3,
+  "total_companies": 8,
+  "base_mean_price": 396.11552985354007,
+  "strat_mean_price": 386.9168259257519,
+  "price_change_pct": -2.3222275408362103,
+  "hhi_base": 2069.273326172355,
+  "hhi_strat": 1894.1221336905642,
+  "score": 100,
+  "companies": [
+    {
+      "plant_name": "G13",
+      "base_net_rev": 1339.3579922276615,
+      "strat_net_rev": 732.445190240153,
+      "delta": -606.9128019875085,
+      "pct": -45.31371041270844,
+      "base_qty": 939620.3759264142,
+      "strat_qty": 906536.3967715296,
+      "is_target": false
+    },
+    {
+      "plant_name": "G14",
+      "base_net_rev": 305.4175407498102,
+      "strat_net_rev": 36.87127950945177,
+      "delta": -268.54626124035843,
+      "pct": -87.92758286936252,
+      "base_qty": 470139.3982204738,
+      "strat_qty": 278511.52021300636,
+      "is_target": false
+    },
+    {
+      "plant_name": "G15",
+      "base_net_rev": -0.002179660000000139,
+      "strat_net_rev": 0.0,
+      "delta": 0.002179660000000139,
+      "pct": 0,
+      "base_qty": 240.0,
+      "strat_qty": 0.0,
+      "is_target": false
+    },
+    {
+      "plant_name": "G16",
+      "base_net_rev": 2261.971020983351,
+      "strat_net_rev": 2041.3007585867317,
+      "delta": -220.67026239661936,
+      "pct": -9.755662665416773,
+      "base_qty": 899752.6142417585,
+      "strat_qty": 876965.7483965763,
+      "is_target": false
+    },
+    {
+      "plant_name": "G17",
+      "base_net_rev": 2054.638485342762,
+      "strat_net_rev": 1921.4238066760315,
+      "delta": -133.2146786667306,
+      "pct": -6.483606708287043,
+      "base_qty": 678363.0404133326,
+      "strat_qty": 523005.5241230589,
+      "is_target": false
+    },
+    {
+      "plant_name": "G18",
+      "base_net_rev": 2932.119223632267,
+      "strat_net_rev": 2824.35802809684,
+      "delta": -107.7611955354273,
+      "pct": -3.675198288899531,
+      "base_qty": 866238.8349783772,
+      "strat_qty": 858780.5142215885,
+      "is_target": false
+    },
+    {
+      "plant_name": "G19",
+      "base_net_rev": -11.672479307417806,
+      "strat_net_rev": 84.92192655938463,
+      "delta": 96.59440586680243,
+      "pct": 827.5397481785822,
+      "base_qty": 18144.047478581044,
+      "strat_qty": 18712.414530964204,
+      "is_target": false
+    },
+    {
+      "plant_name": "G20",
+      "base_net_rev": 43.262642850786776,
+      "strat_net_rev": 629.6184201435337,
+      "delta": 586.355777292747,
+      "pct": 1355.339708013431,
+      "base_qty": 13325.350371854725,
+      "strat_qty": 421674.37092504016,
+      "is_target": true
+    }
+  ]
+}

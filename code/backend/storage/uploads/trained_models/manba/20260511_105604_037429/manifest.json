@@ -1,0 +1,54 @@
+{
+  "model_id": 1,
+  "model_name": "manba",
+  "dataset_id": 5,
+  "dataset_name": "广东",
+  "created_at": "2026-05-11T11:24:28.887491",
+  "entry_script": "storage\\uploads\\22cfd302a5b2445d86a9af7957511a8b.py",
+  "command": [
+    "E:\\桌面\\咸鱼\\code\\code\\backend\\.venv\\Scripts\\python.exe",
+    "E:\\桌面\\咸鱼\\code\\code\\backend\\storage\\uploads\\22cfd302a5b2445d86a9af7957511a8b.py",
+    "--data",
+    "E:\\桌面\\咸鱼\\code\\code\\backend\\storage\\uploads\\trained_models\\manba\\20260511_105604_037429\\input.csv",
+    "--output_dir",
+    "E:\\桌面\\咸鱼\\code\\code\\backend\\storage\\uploads\\trained_models\\manba\\20260511_105604_037429",
+    "--batch_size",
+    "32"
+  ],
+  "record_count": 27072,
+  "started_at": "2026-05-11T10:56:06.076971",
+  "finished_at": "2026-05-11T11:24:28.887491",
+  "metrics": {
+    "Mamba_direct": {
+      "MAPE_150": 0.083037830889225,
+      "RMSE": 77.4901518440408,
+      "MAE": 37.78846740722656,
+      "R2": 0.6737751960754395,
+      "PICP_90": 0.9623015873015873,
+      "PINAW_90": 0.1219954788684845,
+      "Winkler_90": 251.92669677734375,
+      "PICP_95": 0.9781746031746031,
+      "PINAW_95": 0.15781353414058685,
+      "Winkler_95": 336.2137451171875,
+      "PICP_99": 0.9920634920634921,
+      "PINAW_99": 0.2779182195663452,
+      "Winkler_99": 623.372802734375
+    },
+    "Mamba_week": {
+      "MAPE_150": 0.11191410571336746,
+      "RMSE": 96.29846588212088,
+      "MAE": 51.34075927734375,
+      "R2": 0.5433549880981445,
+      "PICP_90": 0.9147846638655462,
+      "PINAW_90": 0.12660488486289978,
+      "Winkler_90": 332.5950927734375,
+      "PICP_95": 0.9490108543417367,
+      "PINAW_95": 0.16273631155490875,
+      "Winkler_95": 454.97705078125,
+      "PICP_99": 0.9820553221288515,
+      "PINAW_99": 0.28231576085090637,
+      "Winkler_99": 941.5578002929688
+    }
+  },
+  "prediction_format": "predictions_test_full.csv / predictions_week0.csv"
+}

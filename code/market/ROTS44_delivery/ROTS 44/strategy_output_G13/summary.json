@@ -1,0 +1,26 @@
+{
+  "case_name": "ROTS 44",
+  "scenario": "G13",
+  "target_plants": [
+    "G13"
+  ],
+  "train_period": "20260101~20260318",
+  "apply_period": "20260319~20260401",
+  "n_target_units": 2,
+  "n_total_units": 32,
+  "n_apply_days": 14,
+  "total_base_revenue": 5133.025937546317,
+  "total_strat_revenue": 5177.897535086315,
+  "revenue_change_pct": 0.8741743775689311,
+  "score": 71.74834875513787,
+  "companies": [
+    {
+      "plant_name": "G13",
+      "base_revenue": 5133.025937546317,
+      "strat_revenue": 5177.897535086315,
+      "delta": 44.87159753999731,
+      "pct": 0.8741743775689311
+    }
+  ],
+  "ensemble_weights_used": "TCN=0.5, Mamba=0.5 (Step1)"
+}

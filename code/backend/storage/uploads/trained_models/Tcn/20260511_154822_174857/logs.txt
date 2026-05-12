@@ -1,0 +1,22 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\94f2f478364d4f31831cdd27f22aebca.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260511_154822_174857\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260511_154822_174857 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: TCN-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch 1/50 batch 1/577 | loss: 0.094351
+    Epoch 1/50 batch 144/577 | loss: 0.010138
+    Epoch 1/50 batch 288/577 | loss: 0.008486
+    Epoch 1/50 batch 432/577 | loss: 0.014042
+    Epoch 1/50 batch 576/577 | loss: 0.008588
+    Epoch   1/50 | Train: 0.011023 Val: 0.006205 | LR: 1.7e-04 | 260s ★
+    Epoch 2/50 batch 1/577 | loss: 0.010778
