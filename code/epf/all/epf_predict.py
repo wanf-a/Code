@@ -307,6 +307,7 @@ def train_model(model, data, config, name):
     model = model.to(device)
     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
+    n_workers = 0 if os.name == "nt" else 4
     train_loader = DataLoader(
         TensorDataset(
             torch.from_numpy(data["x_tr"]),
@@ -314,8 +315,8 @@ def train_model(model, data, config, name):
         ),
         batch_size=config["batch_size"],
         shuffle=True,
-        num_workers=4,
-        pin_memory=True,
+        num_workers=n_workers,
+        pin_memory=(device.type == "cuda"),
         drop_last=True
     )
     val_loader = DataLoader(
@@ -324,8 +325,8 @@ def train_model(model, data, config, name):
             torch.from_numpy(data["y_va"])
         ),
         batch_size=config["batch_size"],
-        num_workers=4,
-        pin_memory=True
+        num_workers=n_workers,
+        pin_memory=(device.type == "cuda"),
     )
 
     optimizer = torch.optim.AdamW(
@@ -402,8 +403,8 @@ def predict_quantiles(model, x, device):
     loader = DataLoader(
         TensorDataset(torch.from_numpy(x), torch.zeros(len(x))),
         batch_size=1024,
-        num_workers=4,
-        pin_memory=True
+        num_workers=0 if os.name == "nt" else 4,
+        pin_memory=(device.type == "cuda"),
     )
     with torch.no_grad():
         for xb, _ in loader:

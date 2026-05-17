@@ -7,14 +7,6 @@
     <section class="panel">
       <div class="panel-header">
         <h3 class="panel-title">模型排名</h3>
-        <div class="query-bar">
-          <input v-model="queryStartDate" type="date" class="input query-input" />
-          <span>至</span>
-          <input v-model="queryEndDate" type="date" class="input query-input" />
-          <button class="btn primary" :disabled="loading" @click="loadRankings()">
-            {{ loading ? "加载中..." : "查询" }}
-          </button>
-        </div>
       </div>
       <div class="table-wrap">
         <table class="table">
@@ -208,8 +200,8 @@ type RankingRow = {
 
 const rankings = ref<RankingRow[]>([]);
 const loading = ref(false);
-const queryStartDate = ref("");
-const queryEndDate = ref("");
+const storedStartDate = ref("");
+const storedEndDate = ref("");
 
 const activeFilter = ref<string | null>(null);
 
@@ -300,17 +292,17 @@ const loadRankings = async (allowFallback = false) => {
   loading.value = true;
   try {
     const data = await fetchRankingSummary({
-      start_time: toDateTime(queryStartDate.value, false),
-      end_time: toDateTime(queryEndDate.value, true),
+      start_time: toDateTime(storedStartDate.value, false),
+      end_time: toDateTime(storedEndDate.value, true),
     });
     rankings.value = data.map(toRow);
     if (
       allowFallback &&
       rankings.value.length === 0 &&
-      (queryStartDate.value || queryEndDate.value)
+      (storedStartDate.value || storedEndDate.value)
     ) {
-      queryStartDate.value = "";
-      queryEndDate.value = "";
+      storedStartDate.value = "";
+      storedEndDate.value = "";
       await loadRankings(false);
     }
   } catch (err: any) {
@@ -326,8 +318,8 @@ onMounted(() => {
   if (savedPeriod) {
     try {
       const parsed = JSON.parse(savedPeriod);
-      queryStartDate.value = parsed.start || "";
-      queryEndDate.value = parsed.end || "";
+      storedStartDate.value = parsed.start || "";
+      storedEndDate.value = parsed.end || "";
     } catch {
       // ignore invalid cache
     }
@@ -349,14 +341,6 @@ onMounted(() => {
   font-weight: 600;
   color: var(--text);
   margin: 0;
-}
-.query-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.query-input {
-  width: 160px;
 }
 
 .filterable {

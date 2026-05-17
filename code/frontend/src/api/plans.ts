@@ -32,8 +32,22 @@ export type PlansQuery = {
   keyword?: string;
 };
 
+export type PlanCreatePayload = {
+  name: string;
+  plan_type: string;
+  status: string;
+  dataset_id?: number | null;
+  model_id?: number | null;
+  description?: string | null;
+};
+
 export const fetchPlans = async (query: PlansQuery = {}) => {
   const { data } = await apiClient.get<Paginated<Plan>>("/plans", { params: query });
+  return data;
+};
+
+export const createPlan = async (payload: PlanCreatePayload) => {
+  const { data } = await apiClient.post<Plan>("/plans", payload);
   return data;
 };
 

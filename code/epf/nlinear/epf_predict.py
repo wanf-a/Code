@@ -240,6 +240,7 @@ def train_model(model, data, config, name):
     model = model.to(device)
     n_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
+    n_workers = 0 if os.name == "nt" else 4
     train_loader = DataLoader(
         TensorDataset(
             torch.from_numpy(data["x_tr"]),
@@ -247,8 +248,8 @@ def train_model(model, data, config, name):
         ),
         batch_size=config["batch_size"],
         shuffle=True,
-        num_workers=4,
-        pin_memory=True,
+        num_workers=n_workers,
+        pin_memory=(device.type == "cuda"),
         drop_last=True
     )
     val_loader = DataLoader(
@@ -257,8 +258,8 @@ def train_model(model, data, config, name):
             torch.from_numpy(data["y_va"])
         ),
         batch_size=config["batch_size"],
-        num_workers=4,
-        pin_memory=True
+        num_workers=n_workers,
+        pin_memory=(device.type == "cuda"),
     )
 
     optimizer = torch.optim.AdamW(
@@ -278,6 +279,7 @@ def train_model(model, data, config, name):
     t0 = time.time()
 
     print(f"\n  训练: {name} | 参数量: {n_params:,}")
+    print(f"  max_epochs: {config['max_epochs']}")
 
     for epoch in range(config["max_epochs"]):
         lr = scheduler.step(epoch)
@@ -311,15 +313,19 @@ def train_model(model, data, config, name):
             best_val = val_loss
             best_state = deepcopy(model.state_dict())
             patience_counter = 0
-            if epoch < 3 or epoch % 10 == 0:
-                print(f"    Epoch {epoch+1:3d} | "
-                      f"Train: {train_loss:.6f} Val: {val_loss:.6f} | "
-                      f"LR: {lr:.1e} | {time.time()-t0:.0f}s ★")
+            marker = " ★"
         else:
             patience_counter += 1
-            if patience_counter >= config["patience"]:
-                print(f"    早停于 Epoch {epoch+1} (patience={patience_counter})")
-                break
+            marker = ""
+
+        if epoch < 3 or epoch % 5 == 0 or marker or patience_counter >= config["patience"]:
+            print(f"    Epoch {epoch+1} / {config['max_epochs']} | "
+                  f"Train: {train_loss:.6f} Val: {val_loss:.6f} | "
+                  f"LR: {lr:.1e} | {time.time()-t0:.0f}s{marker}")
+
+        if patience_counter >= config["patience"]:
+            print(f"    早停于 Epoch {epoch+1} / {config['max_epochs']} (patience={patience_counter})")
+            break
 
     elapsed = time.time() - t0
     print(f"    完成: {elapsed:.0f}s, 最佳验证损失: {best_val:.6f}")
@@ -335,8 +341,8 @@ def predict_quantiles(model, x, device):
     loader = DataLoader(
         TensorDataset(torch.from_numpy(x), torch.zeros(len(x))),
         batch_size=1024,
-        num_workers=4,
-        pin_memory=True
+        num_workers=0 if os.name == "nt" else 4,
+        pin_memory=(device.type == "cuda"),
     )
     with torch.no_grad():
         for xb, _ in loader:

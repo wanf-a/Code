@@ -2,7 +2,7 @@
   <MainLayout>
     <div class="page-header">
       <h1 class="page-title">预测管理</h1>
-      <button class="btn primary" @click="showCreateModal = true">新建方案</button>
+      <button class="btn primary" @click="openCreateModal">新建方案</button>
     </div>
 
     <!-- 方案列表 -->
@@ -51,40 +51,39 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label>模型名称 <span class="required">*</span></label>
-            <input class="input" placeholder="请输入模型名称" />
+            <label>方案名称 <span class="required">*</span></label>
+            <input v-model="form.name" class="input" placeholder="请输入方案名称" />
           </div>
           <div class="form-group">
-            <label>选择数据集 <span class="required">*</span></label>
-            <select class="input">
-              <option value="">请选择数据集</option>
-              <option>广东电价数据</option>
+            <label>选择模型</label>
+            <select v-model="form.model_id" class="input">
+              <option :value="null">请选择模型</option>
+              <option v-for="m in models" :key="m.id" :value="m.id">{{ m.name }}</option>
             </select>
           </div>
           <div class="form-group">
-            <label>预测类型 <span class="required">*</span></label>
-            <select class="input">
-              <option>周前概率</option>
+            <label>选择数据集</label>
+            <select v-model="form.dataset_id" class="input">
+              <option :value="null">请选择数据集</option>
+              <option v-for="ds in datasets" :key="ds.id" :value="ds.id">{{ ds.name }}</option>
             </select>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>开始日期</label>
-              <input class="input" type="date" />
-            </div>
-            <div class="form-group">
-              <label>结束日期</label>
-              <input class="input" type="date" />
-            </div>
+          <div class="form-group">
+            <label>预测类型</label>
+            <select v-model="form.plan_type" class="input">
+              <option value="week_ahead">周前概率</option>
+            </select>
           </div>
           <div class="form-group">
             <label>描述</label>
-            <textarea class="input" rows="2" placeholder="请输入描述"></textarea>
+            <textarea v-model="form.description" class="input" rows="2" placeholder="请输入描述"></textarea>
           </div>
         </div>
         <div class="modal-footer">
           <button class="btn" @click="showCreateModal = false">取消</button>
-          <button class="btn primary" @click="showCreateModal = false">创建</button>
+          <button class="btn primary" :disabled="creating" @click="handleCreate">
+            {{ creating ? '创建中...' : '创建' }}
+          </button>
         </div>
       </div>
     </div>
@@ -95,11 +94,75 @@
 import { computed, onMounted, ref } from "vue";
 import MainLayout from "../layouts/MainLayout.vue";
 import { fetchDatasets } from "../api/datasets";
+import type { Dataset } from "../api/datasets";
 import { fetchModels } from "../api/models";
-import { deletePlan, fetchPlans } from "../api/plans";
+import type { Model } from "../api/models";
+import { createPlan, deletePlan, fetchPlans } from "../api/plans";
 
 const showCreateModal = ref(false);
 const loading = ref(false);
+const creating = ref(false);
+
+const datasets = ref<Dataset[]>([]);
+const models = ref<Model[]>([]);
+
+const form = ref({
+  name: "",
+  dataset_id: null as number | null,
+  model_id: null as number | null,
+  plan_type: "week_ahead",
+  start_date: "",
+  end_date: "",
+  description: "",
+});
+
+const resetForm = () => {
+  form.value = {
+    name: "",
+    dataset_id: null,
+    model_id: null,
+    plan_type: "week_ahead",
+    start_date: "",
+    end_date: "",
+    description: "",
+  };
+};
+
+const openCreateModal = async () => {
+  resetForm();
+  showCreateModal.value = true;
+  const [dsRes, mdRes] = await Promise.all([
+    fetchDatasets({ page: 1, size: 200 }),
+    fetchModels({ page: 1, size: 200 }),
+  ]);
+  datasets.value = dsRes.items;
+  models.value = mdRes.items;
+};
+
+const handleCreate = async () => {
+  if (!form.value.name.trim()) {
+    alert("请输入方案名称");
+    return;
+  }
+  creating.value = true;
+  try {
+    await createPlan({
+      name: form.value.name.trim(),
+      plan_type: form.value.plan_type,
+      dataset_id: form.value.dataset_id,
+      model_id: form.value.model_id,
+      status: "pending",
+      description: form.value.description || undefined,
+    });
+    showCreateModal.value = false;
+    await loadPlans();
+  } catch (err: any) {
+    const detail = err?.response?.data?.detail || err?.message || "未知错误";
+    alert("创建方案失败: " + detail);
+  } finally {
+    creating.value = false;
+  }
+};
 
 const STORAGE_KEY = "predict_selected_date";
 

@@ -471,6 +471,10 @@ const handleCalculate = async () => {
     await doFetchData();
     hasCalculated.value = true;
     currentDayIndex.value = 0;
+    localStorage.setItem("prediction_period", JSON.stringify({
+      start: periodStart.value,
+      end: periodEnd.value,
+    }));
   } finally {
     loading.value = false;
   }

@@ -1,0 +1,30 @@
+{
+  "input_len": 96,
+  "quantiles": [
+    0.005,
+    0.025,
+    0.05,
+    0.5,
+    0.95,
+    0.975,
+    0.995
+  ],
+  "models": [
+    "Ensemble"
+  ],
+  "train_config": {
+    "batch_size": 16,
+    "learning_rate": 0.0005,
+    "weight_decay": 0.0001,
+    "warmup_epochs": 3,
+    "max_epochs": 50,
+    "patience": 10
+  },
+  "data_file": "E:\\◊¿√Ê\\œÃ”„\\code\\code\\backend\\storage\\uploads\\trained_models\\Ensemble\\20260516_063359_097769\\input.csv",
+  "seed": 42,
+  "ensemble_weights": {
+    "TCN": 0.30000000000000004,
+    "Mamba": 0.1,
+    "NLinear": 0.6
+  }
+}

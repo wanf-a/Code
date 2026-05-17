@@ -1,0 +1,102 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260513_044347_445884\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260513_044347_445884 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Ensemble
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch   1 | Train: 0.011023 Val: 0.006205 | LR: 1.7e-04 | 424s ★
+    Epoch   2 | Train: 0.007434 Val: 0.005125 | LR: 3.3e-04 | 773s ★
+    Epoch   3 | Train: 0.006698 Val: 0.004988 | LR: 5.0e-04 | 1116s ★
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 886, in <module>
+    main()
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 582, in main
+    model = train_model(model, data, config, f"{model_name}-QR")
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 354, in train_model
+    for xb, yb in train_loader:
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 734, in __next__
+    data = self._next_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1480, in _next_data
+    self._shutdown_workers()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1652, in _shutdown_workers
+    w.terminate()
+  File "D:\Anaconda\lib\multiprocessing\process.py", line 133, in terminate
+    self._popen.terminate()
+  File "D:\Anaconda\lib\multiprocessing\popen_spawn_win32.py", line 123, in terminate
+    _winapi.TerminateProcess(int(self._handle), TERMINATE)
+PermissionError: [WinError 5] 拒绝访问。
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "D:\Anaconda\lib\multiprocessing\popen_spawn_win32.py", line 123, in terminate
+    _winapi.TerminateProcess(int(self._handle), TERMINATE)
+PermissionError: [WinError 5] 拒绝访问。
+
+[attempt 1 failed with code 1]
+
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260513_044347_445884\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260513_044347_445884 --batch_size 16 --input_len 96
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Ensemble
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 96 (1.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,883, 验证=4,046, 测试=4,047
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch   1 | Train: 0.009730 Val: 0.005250 | LR: 1.7e-04 | 170s ★
+    Epoch   2 | Train: 0.007035 Val: 0.004714 | LR: 3.3e-04 | 287s ★
+    Epoch   3 | Train: 0.006611 Val: 0.004529 | LR: 5.0e-04 | 418s ★
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FF98C92C203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF98D447374  Unknown               Unknown  Unknown
+ntdll.dll          00007FF98EFFCC91  Unknown               Unknown  Unknown
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1285, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "D:\Anaconda\lib\multiprocessing\queues.py", line 122, in get
+    return _ForkingPickler.loads(res)
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\multiprocessing\reductions.py", line 560, in rebuild_storage_filename
+    storage = torch.UntypedStorage._new_shared_filename_cpu(manager, handle, size)
+RuntimeError: Couldn't open shared event: <torch_24992_2067886171_198_event>, error code: <2>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 886, in <module>
+    main()
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 582, in main
+    model = train_model(model, data, config, f"{model_name}-QR")
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 354, in train_model
+    for xb, yb in train_loader:
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 734, in __next__
+    data = self._next_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1492, in _next_data
+    idx, data = self._get_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1454, in _get_data
+    success, data = self._try_get_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1298, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 24992) exited unexpectedly
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FF98C92C203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FF98D447374  Unknown               Unknown  Unknown
+ntdll.dll          00007FF98EFFCC91  Unknown               Unknown  Unknown
+
+[attempt 2 failed with code 3221225786]
+

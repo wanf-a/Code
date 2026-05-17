@@ -160,3 +160,196 @@ Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\�
     Epoch 25/50 batch 1/577 | loss: 0.004441
     Epoch 25/50 batch 144/577 | loss: 0.003593
     Epoch 25/50 batch 288/577 | loss: 0.005150
+    Epoch 25/50 batch 432/577 | loss: 0.013235
+    Epoch 25/50 batch 576/577 | loss: 0.011182
+    Epoch  25/50 | Train: 0.004967 Val: 0.004149 | LR: 2.9e-04 | 9614s
+    Epoch 26/50 batch 1/577 | loss: 0.005392
+    Epoch 26/50 batch 144/577 | loss: 0.004684
+    Epoch 26/50 batch 288/577 | loss: 0.007764
+    Epoch 26/50 batch 432/577 | loss: 0.004926
+    Epoch 26/50 batch 576/577 | loss: 0.002351
+    Epoch  26/50 | Train: 0.004915 Val: 0.003736 | LR: 2.8e-04 | 10314s
+    Epoch 27/50 batch 1/577 | loss: 0.004754
+    Epoch 27/50 batch 144/577 | loss: 0.007709
+    Epoch 27/50 batch 288/577 | loss: 0.002806
+    Epoch 27/50 batch 432/577 | loss: 0.006553
+    Epoch 27/50 batch 576/577 | loss: 0.009077
+    Epoch  27/50 | Train: 0.004902 Val: 0.003797 | LR: 2.6e-04 | 10751s
+    Epoch 28/50 batch 1/577 | loss: 0.005778
+    Epoch 28/50 batch 144/577 | loss: 0.006189
+    Epoch 28/50 batch 288/577 | loss: 0.003975
+    Epoch 28/50 batch 432/577 | loss: 0.002782
+    Epoch 28/50 batch 576/577 | loss: 0.002766
+    Epoch  28/50 | Train: 0.004861 Val: 0.003982 | LR: 2.4e-04 | 11060s
+    Epoch 29/50 batch 1/577 | loss: 0.003108
+    Epoch 29/50 batch 144/577 | loss: 0.004252
+    Epoch 29/50 batch 288/577 | loss: 0.005979
+    Epoch 29/50 batch 432/577 | loss: 0.003898
+    Epoch 29/50 batch 576/577 | loss: 0.007863
+    Epoch  29/50 | Train: 0.004818 Val: 0.003983 | LR: 2.3e-04 | 11379s
+    Epoch 30/50 batch 1/577 | loss: 0.004666
+    Epoch 30/50 batch 144/577 | loss: 0.002614
+    Epoch 30/50 batch 288/577 | loss: 0.005930
+    Epoch 30/50 batch 432/577 | loss: 0.012345
+    Epoch 30/50 batch 576/577 | loss: 0.004424
+    Epoch  30/50 | Train: 0.004786 Val: 0.003764 | LR: 2.1e-04 | 11693s
+    Epoch 31/50 batch 1/577 | loss: 0.004160
+    Epoch 31/50 batch 144/577 | loss: 0.003426
+    Epoch 31/50 batch 288/577 | loss: 0.005646
+    Epoch 31/50 batch 432/577 | loss: 0.003247
+    Epoch 31/50 batch 576/577 | loss: 0.003688
+    Epoch  31/50 | Train: 0.004777 Val: 0.003720 | LR: 1.9e-04 | 12019s ★
+    Epoch 32/50 batch 1/577 | loss: 0.007814
+    Epoch 32/50 batch 144/577 | loss: 0.004102
+    Epoch 32/50 batch 288/577 | loss: 0.004046
+    Epoch 32/50 batch 432/577 | loss: 0.003784
+    Epoch 32/50 batch 576/577 | loss: 0.004460
+    Epoch  32/50 | Train: 0.004755 Val: 0.003838 | LR: 1.8e-04 | 12359s
+    Epoch 33/50 batch 1/577 | loss: 0.003502
+    Epoch 33/50 batch 144/577 | loss: 0.004136
+    Epoch 33/50 batch 288/577 | loss: 0.002315
+    Epoch 33/50 batch 432/577 | loss: 0.005247
+    Epoch 33/50 batch 576/577 | loss: 0.003252
+    Epoch  33/50 | Train: 0.004712 Val: 0.003636 | LR: 1.6e-04 | 12680s ★
+    Epoch 34/50 batch 1/577 | loss: 0.005475
+    Epoch 34/50 batch 144/577 | loss: 0.004239
+    Epoch 34/50 batch 288/577 | loss: 0.003623
+    Epoch 34/50 batch 432/577 | loss: 0.005073
+    Epoch 34/50 batch 576/577 | loss: 0.003993
+    Epoch  34/50 | Train: 0.004703 Val: 0.003636 | LR: 1.5e-04 | 13011s
+    Epoch 35/50 batch 1/577 | loss: 0.003189
+    Epoch 35/50 batch 144/577 | loss: 0.002525
+    Epoch 35/50 batch 288/577 | loss: 0.004193
+    Epoch 35/50 batch 432/577 | loss: 0.003050
+    Epoch 35/50 batch 576/577 | loss: 0.004029
+    Epoch  35/50 | Train: 0.004663 Val: 0.003661 | LR: 1.3e-04 | 13338s
+    Epoch 36/50 batch 1/577 | loss: 0.005428
+    Epoch 36/50 batch 144/577 | loss: 0.003516
+    Epoch 36/50 batch 288/577 | loss: 0.006272
+    Epoch 36/50 batch 432/577 | loss: 0.004361
+    Epoch 36/50 batch 576/577 | loss: 0.004663
+    Epoch  36/50 | Train: 0.004635 Val: 0.003663 | LR: 1.2e-04 | 13662s
+    Epoch 37/50 batch 1/577 | loss: 0.004003
+    Epoch 37/50 batch 144/577 | loss: 0.004174
+    Epoch 37/50 batch 288/577 | loss: 0.004520
+    Epoch 37/50 batch 432/577 | loss: 0.003039
+    Epoch 37/50 batch 576/577 | loss: 0.003285
+    Epoch  37/50 | Train: 0.004620 Val: 0.003635 | LR: 1.0e-04 | 14002s
+    Epoch 38/50 batch 1/577 | loss: 0.004488
+    Epoch 38/50 batch 144/577 | loss: 0.005019
+    Epoch 38/50 batch 288/577 | loss: 0.003633
+    Epoch 38/50 batch 432/577 | loss: 0.004755
+    Epoch 38/50 batch 576/577 | loss: 0.005924
+    Epoch  38/50 | Train: 0.004610 Val: 0.003716 | LR: 8.9e-05 | 14541s
+    Epoch 39/50 batch 1/577 | loss: 0.002757
+    Epoch 39/50 batch 144/577 | loss: 0.006513
+    Epoch 39/50 batch 288/577 | loss: 0.004714
+    Epoch 39/50 batch 432/577 | loss: 0.004067
+    Epoch 39/50 batch 576/577 | loss: 0.003738
+    Epoch  39/50 | Train: 0.004575 Val: 0.003639 | LR: 7.7e-05 | 16108s
+    Epoch 40/50 batch 1/577 | loss: 0.006270
+    Epoch 40/50 batch 144/577 | loss: 0.004644
+    Epoch 40/50 batch 288/577 | loss: 0.002790
+    Epoch 40/50 batch 432/577 | loss: 0.002984
+    Epoch 40/50 batch 576/577 | loss: 0.002857
+    Epoch  40/50 | Train: 0.004570 Val: 0.003594 | LR: 6.5e-05 | 16786s ★
+    Epoch 41/50 batch 1/577 | loss: 0.004641
+    Epoch 41/50 batch 144/577 | loss: 0.003840
+    Epoch 41/50 batch 288/577 | loss: 0.004390
+    Epoch 41/50 batch 432/577 | loss: 0.008009
+    Epoch 41/50 batch 576/577 | loss: 0.003126
+    Epoch  41/50 | Train: 0.004558 Val: 0.003617 | LR: 5.5e-05 | 17261s
+    Epoch 42/50 batch 1/577 | loss: 0.007425
+    Epoch 42/50 batch 144/577 | loss: 0.002691
+    Epoch 42/50 batch 288/577 | loss: 0.002448
+    Epoch 42/50 batch 432/577 | loss: 0.002987
+    Epoch 42/50 batch 576/577 | loss: 0.004522
+    Epoch  42/50 | Train: 0.004508 Val: 0.003632 | LR: 4.5e-05 | 17959s
+    Epoch 43/50 batch 1/577 | loss: 0.004282
+    Epoch 43/50 batch 144/577 | loss: 0.006044
+    Epoch 43/50 batch 288/577 | loss: 0.007774
+    Epoch 43/50 batch 432/577 | loss: 0.007297
+    Epoch 43/50 batch 576/577 | loss: 0.003925
+    Epoch  43/50 | Train: 0.004516 Val: 0.003616 | LR: 3.6e-05 | 18555s
+    Epoch 44/50 batch 1/577 | loss: 0.007175
+    Epoch 44/50 batch 144/577 | loss: 0.002496
+    Epoch 44/50 batch 288/577 | loss: 0.005417
+    Epoch 44/50 batch 432/577 | loss: 0.003479
+    Epoch 44/50 batch 576/577 | loss: 0.003965
+    Epoch  44/50 | Train: 0.004498 Val: 0.003564 | LR: 2.8e-05 | 19079s ★
+    Epoch 45/50 batch 1/577 | loss: 0.003174
+    Epoch 45/50 batch 144/577 | loss: 0.004158
+    Epoch 45/50 batch 288/577 | loss: 0.004434
+    Epoch 45/50 batch 432/577 | loss: 0.005576
+    Epoch 45/50 batch 576/577 | loss: 0.005651
+    Epoch  45/50 | Train: 0.004497 Val: 0.003561 | LR: 2.1e-05 | 19564s ★
+    Epoch 46/50 batch 1/577 | loss: 0.005476
+    Epoch 46/50 batch 144/577 | loss: 0.004346
+    Epoch 46/50 batch 288/577 | loss: 0.003622
+    Epoch 46/50 batch 432/577 | loss: 0.006937
+    Epoch 46/50 batch 576/577 | loss: 0.004051
+    Epoch  46/50 | Train: 0.004499 Val: 0.003564 | LR: 1.5e-05 | 20065s
+    Epoch 47/50 batch 1/577 | loss: 0.003292
+    Epoch 47/50 batch 144/577 | loss: 0.003044
+    Epoch 47/50 batch 288/577 | loss: 0.008604
+    Epoch 47/50 batch 432/577 | loss: 0.002091
+    Epoch 47/50 batch 576/577 | loss: 0.003656
+    Epoch  47/50 | Train: 0.004491 Val: 0.003583 | LR: 9.9e-06 | 20494s
+    Epoch 48/50 batch 1/577 | loss: 0.006551
+    Epoch 48/50 batch 144/577 | loss: 0.004672
+    Epoch 48/50 batch 288/577 | loss: 0.003454
+    Epoch 48/50 batch 432/577 | loss: 0.007023
+    Epoch 48/50 batch 576/577 | loss: 0.006140
+    Epoch  48/50 | Train: 0.004487 Val: 0.003573 | LR: 6.0e-06 | 21890s
+    Epoch 49/50 batch 1/577 | loss: 0.005628
+    Epoch 49/50 batch 144/577 | loss: 0.005656
+    Epoch 49/50 batch 288/577 | loss: 0.003420
+    Epoch 49/50 batch 432/577 | loss: 0.004793
+    Epoch 49/50 batch 576/577 | loss: 0.002965
+    Epoch  49/50 | Train: 0.004485 Val: 0.003572 | LR: 3.2e-06 | 22929s
+    Epoch 50/50 batch 1/577 | loss: 0.003599
+    Epoch 50/50 batch 144/577 | loss: 0.002263
+    Epoch 50/50 batch 288/577 | loss: 0.006190
+    Epoch 50/50 batch 432/577 | loss: 0.002675
+    Epoch 50/50 batch 576/577 | loss: 0.003109
+    Epoch  50/50 | Train: 0.004456 Val: 0.003579 | LR: 1.6e-06 | 23360s
+    完成: 23360s, 最佳验证损失: 0.003561
+
+  TCN-QR 测试集结果:
+    MAPE(150) = 0.0758
+    RMSE = 79.32 | R² = 0.6603
+    PICP90 = 0.849 | PICP95 = 0.909
+
+======================================================================
+  保存完整测试集预测结果
+======================================================================
+  完整测试集预测已保存: predictions_test_full.csv (3960 条记录)
+
+======================================================================
+  周前概率预测
+======================================================================
+  评估周数: 29
+
+  TCN-QR 周前结果:
+    MAPE(150) = 0.0679
+    PICP90 = 0.860 | PINAW90 = 0.0892
+
+  生成图表...
+  模型权重和scaler已保存到: E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260512_081530_011212
+
+======================================================================
+  最终汇总
+======================================================================
+
+  测试集 Direct 预测结果:
+  模型           |  MAPE(150) | PICP90 | PICP95 | PINAW90 |     R²
+  -------------+------------+--------+--------+---------+-------
+  TCN          |     0.0758 |  0.849 |  0.909 |  0.0943 | 0.6603
+
+  周前概率预测结果:
+  模型           |  MAPE(150) | PICP90 | PICP95 | PINAW90 |     R²
+  -------------+------------+--------+--------+---------+-------
+  TCN          |     0.0679 |  0.860 |  0.923 |  0.0892 | 0.7043
+
+  输出目录: E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Tcn\20260512_081530_011212
+  Done!

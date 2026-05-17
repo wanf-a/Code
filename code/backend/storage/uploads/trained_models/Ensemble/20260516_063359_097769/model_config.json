@@ -1,0 +1,25 @@
+{
+  "input_size": 12,
+  "input_len": 96,
+  "model_type": "ensemble",
+  "model_class": "Ensemble",
+  "quantiles": [
+    0.005,
+    0.025,
+    0.05,
+    0.5,
+    0.95,
+    0.975,
+    0.995
+  ],
+  "sub_models": [
+    "TCN",
+    "Mamba",
+    "NLinear"
+  ],
+  "ensemble_weights": {
+    "TCN": 0.30000000000000004,
+    "Mamba": 0.1,
+    "NLinear": 0.6
+  }
+}

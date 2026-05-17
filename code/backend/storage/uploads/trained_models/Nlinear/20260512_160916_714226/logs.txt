@@ -1,0 +1,28 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\d1f2a1f5505440dbba4b38bffb4ed0d5.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Nlinear\20260512_160916_714226\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Nlinear\20260512_160916_714226 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: NLinear-QR
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cpu
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: NLinear-QR | 参数量: 4,711
+    Epoch   1 | Train: 0.029912 Val: 0.009170 | LR: 1.7e-04 | 48s ★
+    Epoch   2 | Train: 0.011950 Val: 0.006236 | LR: 3.3e-04 | 77s ★
+    Epoch   3 | Train: 0.008701 Val: 0.005689 | LR: 5.0e-04 | 125s ★
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFB4684C203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFB46D07374  Unknown               Unknown  Unknown
+ntdll.dll          00007FFB48D1CC91  Unknown               Unknown  Unknown
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFB4684C203  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFB46D07374  Unknown               Unknown  Unknown
+ntdll.dll          00007FFB48D1CC91  Unknown               Unknown  Unknown

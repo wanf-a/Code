@@ -1,0 +1,126 @@
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769 --batch_size 32
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Ensemble
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 672 (7.0天)
+======================================================================
+设备: cuda:0
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,480, 验证=3,960, 测试=3,960
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch   1 | Train: 0.010995 Val: 0.007295 | LR: 1.7e-04 | 258s ★
+    Epoch   2 | Train: 0.007374 Val: 0.004851 | LR: 3.3e-04 | 452s ★
+    Epoch   3 | Train: 0.006706 Val: 0.004698 | LR: 5.0e-04 | 622s ★
+Traceback (most recent call last):
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 886, in <module>
+    main()
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 582, in main
+    model = train_model(model, data, config, f"{model_name}-QR")
+  File "E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py", line 354, in train_model
+    for xb, yb in train_loader:
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1437, in _next_data
+    self._shutdown_workers()
+  File "E:\桌面\咸鱼\code\code\backend\.venv\lib\site-packages\torch\utils\data\dataloader.py", line 1592, in _shutdown_workers
+    w.terminate()
+  File "D:\Anaconda\lib\multiprocessing\process.py", line 133, in terminate
+    self._popen.terminate()
+  File "D:\Anaconda\lib\multiprocessing\popen_spawn_win32.py", line 123, in terminate
+    _winapi.TerminateProcess(int(self._handle), TERMINATE)
+PermissionError: [WinError 5] 拒绝访问。
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "D:\Anaconda\lib\multiprocessing\popen_spawn_win32.py", line 123, in terminate
+    _winapi.TerminateProcess(int(self._handle), TERMINATE)
+PermissionError: [WinError 5] 拒绝访问。
+
+[attempt 1 failed with code 1]
+
+Command: E:\桌面\咸鱼\code\code\backend\.venv\Scripts\python.exe E:\桌面\咸鱼\code\code\backend\storage\uploads\44c095bf580b4e4e8883c33c5ea393dc.py --data E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769\input.csv --output_dir E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769 --batch_size 16 --input_len 96
+
+======================================================================
+  广东电力市场电价概率预测系统
+  模型: Ensemble
+  分位数: [0.005, 0.025, 0.05, 0.5, 0.95, 0.975, 0.995]
+  输入长度: 96 (1.0天)
+======================================================================
+设备: cuda:0
+
+数据: 27,072 行, 特征维度: 12
+电价统计: min=0.0, max=1495.2, mean=341.2 元/MWh
+样本: 训练=18,883, 验证=4,046, 测试=4,047
+
+  训练: TCN-QR | 参数量: 107,911
+    Epoch   1 | Train: 0.009764 Val: 0.005312 | LR: 1.7e-04 | 336s ★
+    Epoch   2 | Train: 0.006995 Val: 0.004509 | LR: 3.3e-04 | 704s ★
+    Epoch  21 | Train: 0.004902 Val: 0.003586 | LR: 3.6e-04 | 4057s ★
+    Epoch  31 | Train: 0.004403 Val: 0.003526 | LR: 1.9e-04 | 5532s ★
+    完成: 8590s, 最佳验证损失: 0.003361
+
+  训练: Mamba-QR | 参数量: 233,735
+    Epoch   1 | Train: 0.010652 Val: 0.004920 | LR: 1.7e-04 | 117s ★
+    Epoch   2 | Train: 0.006728 Val: 0.004646 | LR: 3.3e-04 | 253s ★
+    Epoch   3 | Train: 0.006086 Val: 0.004177 | LR: 5.0e-04 | 341s ★
+    早停于 Epoch 24 (patience=10)
+    完成: 3726s, 最佳验证损失: 0.003470
+
+  训练: NLinear-QR | 参数量: 679
+    Epoch   1 | Train: 0.021970 Val: 0.007326 | LR: 1.7e-04 | 104s ★
+    Epoch   2 | Train: 0.009384 Val: 0.006064 | LR: 3.3e-04 | 214s ★
+    Epoch   3 | Train: 0.007556 Val: 0.005402 | LR: 5.0e-04 | 295s ★
+    Epoch  11 | Train: 0.005999 Val: 0.004500 | LR: 4.7e-04 | 659s ★
+    早停于 Epoch 47 (patience=10)
+    完成: 2816s, 最佳验证损失: 0.004412
+
+======================================================================
+  集成概率预测 (测试集 Direct)
+======================================================================
+  最优权重: TCN=0.3, Mamba=0.1, NLinear=0.6
+  集成 MAPE(150) = 0.0751
+  集成 RMSE = 78.85 | R² = 0.6575
+  集成 PICP90 = 0.936 | PICP95 = 0.970
+
+======================================================================
+  保存完整测试集预测结果
+======================================================================
+  完整测试集预测已保存: predictions_test_full.csv (4047 条记录)
+
+======================================================================
+  周前概率预测
+======================================================================
+  评估周数: 35
+
+======================================================================
+  集成概率预测 (加权平均)
+======================================================================
+  最优权重: TCN=0.3, Mamba=0.1, NLinear=0.6
+  集成 MAPE(150) = 0.0778
+  集成 PICP90 = 0.931 | R² = 0.6723
+
+  生成图表...
+  模型权重和scaler已保存到: E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769
+
+======================================================================
+  最终汇总
+======================================================================
+
+  测试集 Direct 预测结果:
+  模型           |  MAPE(150) | PICP90 | PICP95 | PINAW90 |     R²
+  -------------+------------+--------+--------+---------+-------
+  Ensemble     |     0.0751 |  0.936 |  0.970 |  0.1337 | 0.6575
+
+  周前概率预测结果:
+  模型           |  MAPE(150) | PICP90 | PICP95 | PINAW90 |     R²
+  -------------+------------+--------+--------+---------+-------
+  Ensemble     |     0.0778 |  0.931 |  0.967 |  0.1354 | 0.6723
+
+  集成权重: TCN=0.3, Mamba=0.1, NLinear=0.6
+
+  输出目录: E:\桌面\咸鱼\code\code\backend\storage\uploads\trained_models\Ensemble\20260516_063359_097769
+  Done!
